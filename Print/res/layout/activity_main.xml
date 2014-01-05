@@ -2,45 +2,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fondo"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
-
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/btngps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="18dp"
-        android:text="@string/btnTest" />
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btnsettings"
+        android:layout_marginLeft="67dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/Generar_Factura" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/button1"
-        android:layout_below="@+id/button1"
-        android:layout_marginTop="32dp"
-        android:text="@string/ActualizarMysql" />
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btngps"
+        android:layout_marginLeft="67dp"
+        android:text="@string/Datos" />
 
     <Button
-        android:id="@+id/btngps"
+        android:id="@+id/button1"
+        style="@style/AppTheme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
         android:layout_below="@+id/button2"
-        android:layout_marginLeft="14dp"
-        android:layout_marginTop="67dp"
-        android:layout_toRightOf="@+id/textView1"
-        android:text="Button" />
+        android:layout_marginLeft="67dp"
+        android:text="@string/Impresora" />
+
+    <ImageButton
+        android:id="@+id/btnGenFactura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btngps"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/button1"
+        android:contentDescription="@string/Generar_Factura"
+        android:src="@drawable/factura" />
+
+    <ImageButton
+        android:id="@+id/btnsettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/button2"
+        android:layout_marginRight="19dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/action_settings"
+        android:src="@drawable/settings" />
 
 </RelativeLayout>

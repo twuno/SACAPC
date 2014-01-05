@@ -192,7 +192,8 @@ public class config extends Activity {
 	    			//editor.putString("portName", portNameField);
 	    			String devname = "BT:"+mac;
 	    			setPortname(devname);
-	    			 getPort(c);
+	    			singleton.getInstance().setString(devname); 
+	    			getPort(c);
 	    			//editor.commit();
 				}
 			})

@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Impresora" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/printer" />
+
+    <ImageView
+        android:id="@+id/ImageView05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView1"
+        android:layout_below="@+id/ImageView03"
+        android:layout_marginLeft="21dp"
+        android:layout_toLeftOf="@+id/ImageView01"
+        android:layout_toRightOf="@+id/s"
+        android:src="@drawable/printer" />
+
+    <ImageView
+        android:id="@+id/ImageView02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ImageView04"
+        android:layout_alignLeft="@+id/ImageView04"
+        android:src="@drawable/printer" />
+
+    <ImageView
+        android:contentDescription="@string/Impresora"
+        android:id="@+id/ImageView03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/s"
+        android:layout_below="@+id/ImageView01"
+        android:src="@drawable/printer" />
+
+    <ImageView
+                android:contentDescription="@string/Impresora"
+        android:id="@+id/ImageView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ImageView02"
+        android:layout_marginTop="16dp"
+        android:layout_toLeftOf="@+id/ImageView04"
+        android:src="@drawable/printer" />
+
+    <ImageView
+		android:contentDescription="@string/Impresora"
+        android:id="@+id/ImageView04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView1"
+        android:layout_marginRight="23dp"
+        android:layout_toLeftOf="@+id/imageView1"
+        android:src="@drawable/printer" />
+
+    <ImageView
+        android:contentDescription="@string/Impresora"
+        android:id="@+id/s"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_alignTop="@+id/ImageView02"
+        android:src="@drawable/bluetooth" />
+
+    <ListView
+        android:id="@+id/lstDB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" >
+
+    </ListView>
+
+</RelativeLayout>

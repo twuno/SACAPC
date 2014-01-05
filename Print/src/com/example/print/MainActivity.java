@@ -28,6 +28,7 @@ import android.view.View.OnClickListener;
 import android.view.animation.BounceInterpolator;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 
 public class MainActivity extends Activity {
@@ -44,7 +45,29 @@ public class MainActivity extends Activity {
 		    StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 		    StrictMode.setThreadPolicy(policy);
 		}
-		final Button btngetPort = (Button) findViewById(R.id.button1);
+		final ImageButton btnsettings = (ImageButton)findViewById(R.id.btnsettings);
+		btnsettings.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+			 Intent i = new Intent(pc,Settings.class);
+			 startActivity(i);
+				
+			}
+		});		
+		
+		
+		final Button btnPrinter = (Button) findViewById(R.id.button1);
+		btnPrinter.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent i = new Intent(MainActivity.this,Impresora.class);
+				startActivity(i);																																																																																																																																																																																																																								
+				
+			}
+		});
+		/*		
 		btngetPort.setOnClickListener(new OnClickListener() {
 			
 			@Override
@@ -69,7 +92,7 @@ public class MainActivity extends Activity {
 				String res = "";
 				res=m.ejecutarConsultaSQL(false, consulta, pc);
 				SQLite lite = new SQLite(pc);
-				lite.insertarDatos(res);	
+				lite.insertarDatosTarifas(res);	
 				Double p1=0.0 ,p2=0.0;	
 				MyLocation lo = new MyLocation(pc);
 				lo.Posicion(pc);
@@ -97,6 +120,7 @@ public class MainActivity extends Activity {
 			
 			}
 		});
+*/
 	}	
 
 	@Override
