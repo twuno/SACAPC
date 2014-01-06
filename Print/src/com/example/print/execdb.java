@@ -8,9 +8,9 @@ public class execdb extends AsyncTask<Context, Void, Integer> {
 	Context c =null;
 	@Override
 	protected Integer doInBackground(Context... params) {
-		MySql m = new MySql();
-		m.conectarBDMySQL("root", "Pr0b1t.2012!", "190.185.116.14", "3306","Walter", params[0]);
-		SQLite sl = new SQLite(params[0],m);
+	//	MySql m = new MySql();
+//		m.conectarBDMySQL("root", "Pr0b1t.2012!", "190.185.116.14", "3306","Walter", params[0]);
+		SQLite sl = new SQLite(params[0]);
 		int res=sl.actualizarinfo();
 		this.c=params[0];
 		return res;

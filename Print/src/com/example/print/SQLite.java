@@ -1,9 +1,12 @@
 package com.example.print;
 
+import java.util.ArrayList;
+
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -72,14 +75,14 @@ public class SQLite extends SQLiteOpenHelper{
 	
 	private MySql instancia =null;
 	
-	public SQLite(Context context,MySql myinstancia) {
+	public SQLite(Context context) {
 		super(context, NOMBRE_BASEDATOS, null, VERSION_BASEDATOS);
 		this.context=context;
-		// TODO Auto-generated constructor stub
-		this.instancia=myinstancia;
+		
 		
 	}
-
+	
+	
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		try{
@@ -97,12 +100,18 @@ public class SQLite extends SQLiteOpenHelper{
 		}		
 		int a=8;
 
-		// TODO Auto-generated method stub
+	
 		
 	}
 	
-
-
+	private void crearInstanciaMysql()
+	{
+		MySql m = new MySql();
+		m.conectarBDMySQL("root", "Pr0b1t.2012!", "190.185.116.14", "3306","Walter",this.context);
+		this.instancia=m; 
+	}
+	
+	
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 		// TODO Auto-generated method stub
@@ -110,12 +119,11 @@ public class SQLite extends SQLiteOpenHelper{
 		db.execSQL("drop table if exists Tarifas");
 		onCreate(db);
 		
-		
-		
 	}
 	
 	public int actualizarinfo()
 	{
+		crearInstanciaMysql();
 		drop();
 		try{
 		String query="Select * from PreciosTarifas ;";
@@ -146,7 +154,7 @@ public class SQLite extends SQLiteOpenHelper{
 	}catch(Exception e){return -1;}
 	return 0;
 	}
-	
+
 	
 	public int insertDatos(String value)
 	{
@@ -167,6 +175,7 @@ public class SQLite extends SQLiteOpenHelper{
 		}
 		return 0;
 	}
+	
 	
 	public int insertarDatos(String value,String Tabla)
 	{
@@ -205,4 +214,59 @@ public class SQLite extends SQLiteOpenHelper{
 		return 0;
 		}
 
+	
+	public ArrayList<Object> LastFactura(String Medidor)
+	{
+		ArrayList<Object> data = new ArrayList<Object>();
+		SQLiteDatabase db = getReadableDatabase();
+		String[] valores_recuperar={"_id","cuenta","FK_TipoTarifaId","Descripcion","Alcantarillado","NombreCliente","Serie","Modelo","Fecha","MedicionActual","SaldoPendiente"};
+		Cursor c =db.query("info", valores_recuperar, "Serie="+Medidor, null, null, null, null);
+		if (c!=null)
+		{
+			c.moveToFirst();
+			try{
+				data.add(c.getInt(0));
+				data.add(c.getString(1));
+				data.add(c.getInt(2));
+				data.add(c.getString(3));
+				data.add(c.getInt(4));
+				data.add(c.getString(5));
+				data.add(c.getString(6));
+				data.add(c.getString(7));
+				data.add(c.getString(8));
+				data.add(c.getDouble(9));
+				data.add(c.getDouble(10));
+				return data;
+			}catch(Exception e)
+			{
+		//		Toast.makeText(context, "El numero de medidor no existe", 10000).show();
+				return null;
+			}
+			}else
+		{
+		//	Toast.makeText(context, "El numero de medidor no existe", 10000).show();
+			return null;
+		}
+				
+
+	}
+	
+	public ArrayList<Object> Tarifa(Double consumo, int TipoTarifa)
+	{
+		SQLiteDatabase db = getReadableDatabase();
+		ArrayList<Object> data = new ArrayList<Object>();
+		Cursor c = db.query("Tarifas",null,"FK_TipoTarifaId="+TipoTarifa+" and ConsumoMinimo<="+consumo+" and ConsumoMaximo>"+consumo, null, null, null, null);
+		if(c !=null)
+		{
+			c.moveToFirst();
+		}
+		
+		data.add(c.getInt(0));
+		data.add(c.getInt(1));
+		data.add(c.getString(2));
+		data.add(c.getInt(3));
+		data.add(c.getInt(4));
+		data.add(c.getDouble(5));
+		return data;
+	}
 }

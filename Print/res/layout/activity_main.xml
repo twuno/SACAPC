@@ -29,7 +29,7 @@
         android:text="@string/Datos" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/brnImpFact"
         style="@style/AppTheme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/btngps"
         android:layout_marginLeft="15dp"
-        android:layout_toRightOf="@+id/button1"
+        android:layout_toRightOf="@+id/brnImpFact"
         android:contentDescription="@string/Generar_Factura"
         android:src="@drawable/factura" />
 

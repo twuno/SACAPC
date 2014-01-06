@@ -57,7 +57,7 @@ public class MainActivity extends Activity {
 		});		
 		
 		
-		final Button btnPrinter = (Button) findViewById(R.id.button1);
+		final Button btnPrinter = (Button) findViewById(R.id.brnImpFact);
 		btnPrinter.setOnClickListener(new OnClickListener() {
 			
 			@Override
@@ -67,6 +67,20 @@ public class MainActivity extends Activity {
 				
 			}
 		});
+		
+		final ImageButton btnFactura = (ImageButton) findViewById(R.id.btnGenFactura);
+		btnFactura.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent i = new Intent(pc,FacturasMedidor.class);
+				startActivity(i);
+				
+			}
+		});
+		
+		
 		/*		
 		btngetPort.setOnClickListener(new OnClickListener() {
 			

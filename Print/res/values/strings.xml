@@ -15,5 +15,9 @@
     <string name="title_activity_impresora">Impresora</string>
     <string name="title_activity_settings">Settings</string>
     <string name="title_activity_base_datos">Configuracion de Base de Datos</string>
+    <string name="title_activity_facturas_medidor">Facturas con Medidor</string>
+    <string name="imprfactura">Imprimir Factura</string>
+    <string name="NumeroMedidor">Ingrese Numero Medidor</string>
+    <string name="Lectura">Ingese la lectura de Medidor</string>
 
 </resources>

@@ -52,6 +52,10 @@
             android:name="com.example.print.BaseDatos"
             android:label="@string/title_activity_base_datos" >
         </activity>
+        <activity
+            android:name="com.example.print.FacturasMedidor"
+            android:label="@string/title_activity_facturas_medidor" >
+        </activity>
     </application>
 
 </manifest>
