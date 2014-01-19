@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SACAPC</string>
+    <string name="configuraciones">Configuraciones</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="btnTest">Probar Impresora</string>
+    <string name="ActualizarMysql">Actualizar Datos</string>
+    <string name="title_activity_android_gpstracking">AndroidGPSTrackingActivity</string>
+    <string name="title_activity_main_menu">Menu</string>
+    <string name="Impresora">Impresora</string>
+    <string name="Datos">Datos</string>
+    <string name="Generar_Factura">Generar Factura</string>
+    <string name="title_activity_impresora">Impresora</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_base_datos">Configuracion de Base de Datos</string>
+    <string name="title_activity_facturas_medidor">Facturas con Medidor</string>
+    <string name="imprfactura">Imprimir Factura</string>
+    <string name="NumeroMedidor">Ingrese Numero Medidor</string>
+    <string name="Lectura">Ingese la lectura de Medidor</string>
+
+   
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">CardsUI</string>
+    <string name="title">Title</string>
+    <string name="desc">Description</string>
+	<string name="overflow">Menu Overflow</string>
+	<string name="color_stripe">Color Stripe</string>
+	<string name="ListadeFacturas">Lista de Facturas Emitidas hoy</string>
+	<string name="Foto">Fotografia de Medidor</string>
+    
+    
+    
+</resources>

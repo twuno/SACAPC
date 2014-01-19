@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <style name="EditTextwhiteTheme" parent="android:Widget.EditText">
+	  <item name="android:background">@drawable/whitetheme_edit_text_holo_light</item>
+	  <item name="android:textColor">#000000</item>
+  </style>
+
+  <style name="AutoCompleteTextViewwhiteTheme" parent="android:Widget.AutoCompleteTextView">
+      <item name="android:dropDownSelector">@drawable/whitetheme_list_selector_holo_light</item>
+	  <item name="android:background">@drawable/whitetheme_edit_text_holo_light</item>
+	  <item name="android:textColor">#000000</item>
+  </style>
+
+  <style name="CheckBoxwhiteTheme" parent="android:Widget.CompoundButton.CheckBox">
+      <item name="android:button">@drawable/whitetheme_btn_check_holo_light</item>
+  </style>
+
+  <style name="RadioButtonwhiteTheme" parent="android:Widget.CompoundButton.RadioButton">
+      <item name="android:button">@drawable/whitetheme_btn_radio_holo_light</item>
+  </style>
+
+  <style name="ButtonwhiteTheme" parent="android:Widget.Button">
+	  <item name="android:background">@drawable/whitetheme_btn_default_holo_light</item>
+	  <item name="android:minHeight">48dip</item>
+	  <item name="android:minWidth">64dip</item>
+	  <item name="android:textColor">#000000</item>
+  </style>
+
+  <style name="ImageButtonwhiteTheme" parent="android:Widget.ImageButton">
+	  <item name="android:background">@drawable/whitetheme_btn_default_holo_light</item>
+  </style>
+
+  <style name="SpinnerwhiteTheme" parent="android:Widget.Spinner">
+      <item name="android:background">@drawable/whitetheme_spinner_background_holo_light</item>
+      <item name="android:dropDownSelector">@drawable/whitetheme_list_selector_holo_light</item>
+  </style>
+
+  <style name="SpinnerDropDownItemwhiteTheme" parent="android:Widget.DropDownItem.Spinner">
+      <item name="android:checkMark">@drawable/whitetheme_btn_radio_holo_light</item>
+  </style>
+  <style name="ProgressBarwhiteTheme" parent="android:Widget.ProgressBar.Horizontal">
+      <item name="android:progressDrawable">@drawable/whitetheme_progress_horizontal_holo_light</item>
+      <item name="android:indeterminateDrawable">@drawable/whitetheme_progress_indeterminate_horizontal_holo_light</item>
+      <item name="android:minHeight">16dip</item>
+      <item name="android:maxHeight">16dip</item>
+  </style>
+
+  <style name="SeekBarwhiteTheme" parent="android:Widget.SeekBar">
+      <item name="android:progressDrawable">@drawable/whitetheme_scrubber_progress_horizontal_holo_light</item>
+      <item name="android:indeterminateDrawable">@drawable/whitetheme_scrubber_progress_horizontal_holo_light</item>
+      <item name="android:minHeight">13dip</item>
+      <item name="android:maxHeight">13dip</item>
+      <item name="android:thumb">@drawable/whitetheme_scrubber_control_selector_holo_light</item>
+      <item name="android:thumbOffset">16dip</item>
+      <item name="android:paddingLeft">16dip</item>
+      <item name="android:paddingRight">16dip</item>
+  </style>
+
+  <style name="ListViewwhiteTheme" parent="android:Widget.ListView">
+      <item name="android:listSelector">@drawable/whitetheme_list_selector_holo_light</item>
+  </style>
+
+  <style name="ListViewwhiteTheme.White" parent="android:Widget.ListView.White">
+      <item name="android:listSelector">@drawable/whitetheme_list_selector_holo_light</item>
+  </style>
+
+  <style name="SpinnerItemwhiteTheme" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+      <item name="android:textColor">#000000</item>
+  </style>
+
+</resources>
